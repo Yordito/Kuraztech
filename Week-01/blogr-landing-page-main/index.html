@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+     <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav__logo {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .nav__menu {
+            display: flex;
+            list-style: none;
+           
+        }
+        .nav__left, .nav__right {
+            display: flex;
+        }
+
+        .nav__item {
+            margin-left: 2rem;
+        }
+
+        .nav__link {
+            text-decoration: none;
+            color: inherit;
+            font-size: 1rem;
+        }
+
+        .nav__toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: inherit;
+        }
+
+        @media (max-width: 768px) {
+            .nav__menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+             
+            }
+
+            .nav__menu.active {
+                display: flex;
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+            .nav__item {
+                margin: 1rem 0;
+                text-align: center;
+            }
+
+            .nav__toggle {
+                display: block;
+            }
+            .image-form {
+        justify-content: center;
+        padding-left: 20px; 
+    }
+        }
+        body{
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .form{
+      
+      font-family: 'Times New Roman', Times, serif;
+      display: grid;
+      place-items:center;
+      min-height: 55vh;
+      border-radius: 1rem;
+      background-image: url(images/bg-pattern-circles.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #f4617a;
+      background-image: url(images/bg-pattern-intro-desktop.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #f4617a;
+    }
+    .container{
+      display: flex;
+      font-size: 14px;
+    }
+    .image-form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100vh; 
+    padding-left: 700px;
+}
+    .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-container img {
+    max-width: 150%;
+    height: auto;
+   
+  
+}
+.navbar{
+  margin:initial;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  color: #000;
+}
+    .nav-links{
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-link{
+      list-style: none;
+      height: 100%;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    a{
+      text-decoration: none;
+      
+    }
+    .drop-down{
+      position: absolute;
+    }
+        .center-text {
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+    <div class="container">
+      <nav class="navbar">
+        <ul class="nav-links">
+         
+          <li class="nav-link">
+           
+         
+        </ul>
+      </nav>
+      
+    </div>
+ <h1> 
+  A modern publishing platform
+</h1>
+<p>Grow your audience and build your online brand</p>
+  <button>Start for Free</button>
+ <button> Learn More</button>
+</div>
+    
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav__logo">Blogr</a>
+            <div class="nav-left">
+            <ul class="nav__menu nav__left" id="nav-left">
+                <li class="nav__item"><a href="#" class="nav__link">Product</a> <ul class="drop-down">
+                    <li>
+                      Overview
+                    </li>
+                    <li>
+                      Pricing
+                    </li>
+                   <li>
+                    Marketplace
+                  </li>
+                  <li>
+                    Features
+                </li>
+               <li>
+                Integrations   
+              </li>
+                
+                </li>
+                <li class="nav__item"><a href="#" class="nav__link">Company</a>  <ul class="drop-down">
+                    <li>
+                     About
+                    </li>
+                    <li>
+                      Team
+                    </li>
+                    <li>
+                      Blog
+                  </li>
+                  <li>
+                    Careers
+                  </li>
+                
+                </li>
+                <li class="nav__item"><a href="#" class="nav__link">Connect</a><ul class="drop-down">
+                    <li>
+                      Contact
+                    </li>
+                    <li>
+                      Newsletter
+                    </li>
+                    <li>
+                      LinkedIn
+                    </li>
+                </li>
+            </ul>
+            </div>
+            <ul class="nav__menu nav__right" id="nav-right">
+                <li class="nav__item"><a href="#" class="nav__link">Login</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">sign up</a></li>
+            </ul>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+   
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navLeft = document.getElementById('nav-left');
+        const navRight = document.getElementById('nav-right');
+
+        navToggle.addEventListener('click', () => {
+            navLeft.classList.toggle('active');
+            navRight.classList.toggle('active');
+        });
+    </script>
+    <p class="center-text">Designed for the future</p>
+    <div class="image-container">
+        <div class="image-container-right1">
+            <img src="images/illustration-editor-desktop.svg" alt="Background Pattern">
+            <h4>Introducing an extensible editor</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Aspernatur suscipit cum obcaecati iusto earum debitis vero 
+                fugitvoluptatibus fuga ex ad exercitationem asperiores recusandae
+                numquamiste aliquid eaque quas, consequatur maxime temporibus.
+              </p>
+              <div class="image-container-right2">
+              <h4>Robust content management</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+  dolorum sit incidunt neque atque adipisci dolor fugit. Dolore enim 
+  quae optio nostrum obcaecati voluptate libero ipsa, provident error!
+  </p>
+              </div>
+        </div>
+    </div> 
+    <div class="image-middle">
+      <div class="image-middle-left">
+        <img src="images/illustration-phones.svg" alt="">
+    </div>
+    <div class="image-middle-right">
+      <h3>State of the Art Infrastructure</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing
+         elit. Inventore quidem laboriosam esse quibusdam,
+          temporibus dolor possimus voluptatibus delectus non, 
+          deserunt officia reiciendis!
+      </p>
+    </div>
+    <div class="image-bottom">
+      <div class="content">
+        
+        <div class="image">
+
+          <img src="images/illustration-laptop-mobile.svg" alt="">
+        </div>
+        <div class="text2">
+          <div class="image-bottom1">
+            <h4>Free, open, simple</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing 
+              elit. Sit quibusdam placeat omnis, cumque atque, 
+              aliquam nisi debitis temporibus impedit officia similique
+               hic. Illum, praesentium. Tenetur ut placeat iusto adipisci debitis?</p>
+          </div>
+       
+          <div class="main-bottom2">
+            <h4>Powerful Tooling</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Quam aut iste nostrum ullam, labore corrupti minus placeat 
+               maiores odio accusantium.,
+            </p>
+          </div>
+        </div>
+        
+      </div>
+</body>
+</html>
