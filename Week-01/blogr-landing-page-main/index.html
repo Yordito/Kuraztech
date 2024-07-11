@@ -12,6 +12,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
+            list-style: none;
         }
 
         .header {
@@ -20,6 +21,7 @@
             top: 0;
             left: 0;
             z-index: 1000;
+            list-style: none;
         }
 
         .nav {
@@ -29,6 +31,7 @@
             padding: 1rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            list-style: none;
         }
 
         .nav__logo {
@@ -44,6 +47,7 @@
         }
         .nav__left, .nav__right {
             display: flex;
+            list-style: none;
         }
 
         .nav__item {
@@ -54,6 +58,7 @@
             text-decoration: none;
             color: inherit;
             font-size: 1rem;
+            list-style: none;
         }
 
         .nav__toggle {
@@ -161,6 +166,41 @@
             font-weight: bold;
             font-size: 2em;
         }
+        footer{
+  background:#1a1923fe;
+  height: 315px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 75px;
+  color: #fff;
+}
+
+footer .footer-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+footer h3{
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+footer a{
+  font-size: 13px;
+  color: #fff;
+}
+footer ul{
+  list-style: none;
+  display: block;
+}
+
+footer li{
+  text-align: left;
+  margin-bottom: 10px;
+}
     </style>
 </head>
 <body>
@@ -312,5 +352,40 @@
         </div>
         
       </div>
+      <footer>
+        <div class="footer-container">
+          <a href="#" class="footer-logo">Blogr</a>
+          </div>
+       
+          <div class="product">
+            <h3>Product</h3>
+            <ul>
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Features</a></li>
+              <li> <a href="#">Integrations</a></li>
+            </ul>
+          </div>
+       
+          <div class="company">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Blog</a></li>
+              <li> <a href="#">Careers</a></li>
+            </ul>
+          </div>
+       
+          <div class="connect">
+            <h3>Connect</h3>
+            <ul>
+              <li><a href="#">Conatact</a></li>
+              <li><a href="#">Newletter</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>
